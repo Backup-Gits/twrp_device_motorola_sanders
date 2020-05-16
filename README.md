@@ -2,40 +2,39 @@ TWRP device configuration for LeEco Le Max 2
 ==============
 
 kernel source used for prebuilt kernel:
-https://github.com/LineageOS/android_kernel_leeco_msm8996/
+https://github.com/AICP/kernel_motorola_msm8953/
 
 To compile android-9.0 based TWRP
 ==============
 
     export ALLOW_MISSING_DEPENDENCIES=true
     . build/envsetup.sh
-    lunch omni_x2-eng && \
-    mka adbd recoveryimage 2>&1 | tee make_x2.log
+    lunch omni_sanders-eng && \
+    mka adbd recoveryimage 2>&1 | tee make_sanders.log
 
 tee command makes a copy of the terminal output to a file.
 If you're using Windows PowerShell? Please relace tee with
 Tee-Object
 
+Device configuration for Moto G5S Plus (sanders)
+===========================================
 
-Device configuration for Letv Max2 (x820 x821 x822 x829)
-=====================================
+The Motorola Moto G5S Plus (codenamed _"sanders"_) is a mid-range smartphone from Motorola mobility.
+It was announced on August 2017.
 
-|Basic                    | Spec Sheet                                                           |
-|------------------------:|:---------------------------------------------------------------------|
-| CPU                     | Dual-core 2.15GHz Kryo & dual-core 1.6GHz Kryo                       |
-| CHIPSET                 | Qualcomm MSM8996 Snapdragon 820                                      |
-| GPU                     | 624MHz Adreno 530                                                    |
-| Memory                  | 4/6 GB (LPDDR4 1866MHz dual-channel)                                 |
-| Shipped Android Version | 6.0 (Marshmallow)                                                    |
-| Storage                 | 64/128 GB (UFS2.0)                                                   |
-| Battery                 | 3100 mAh (non-removable)                                             |
-| Dimensions              | 156.8 x 77.6 x 7.99 mm                                               |
-| Display                 | 1440 x 2560 pixels, 5.7" LTPS IPS LCD, 16:9 ratio (~515 PPI density) |
-| Rear Camera             | 21.0 MP, LED flash (Sony Exmor RS IMX230 f/2.0, 1/2.4")              |
-| Front Camera            | 8.0 MP (OmniVision OV8865 f/2.2, 1/3.2")                             |
-| Extra Features          | IR Blaster (MAXQ616)                                                 |
-| Release Month           | April 2016                                                           |
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | Octa-core 2.0 GHz Cortex-A53
+Chipset | Qualcomm MSM8953 Snapdragon 625
+GPU     | Adreno 506
+Memory  | 4 GB RAM
+Shipped Android Version | 7.0.0
+Storage | 32 GB
+MicroSD | Up to 256 GB
+Battery | Li-Ion 3000mAh battery
+Display | 1080 x 1920 pixels, 5.2 inches (~402 ppi pixel density)
+Camera  | Dual 13 MP, f/2.0, autofocus, dual-LED (dual tone) flash, 2150 x 1440 pixels
 
-<p align="center">
-<img height="600" src="https://i.imgur.com/2yEcQ2f.png" title="LeEco Le Max 2"/>
-</p>
+Copyright 2017 - The LineageOS Project.
+
+![Moto G5S Plus](http://cdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g5s-plus-1.jpg "Moto G5 Plus")
