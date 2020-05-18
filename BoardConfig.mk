@@ -35,8 +35,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_MKBOOTIMG_ARGS :=  --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --kernel_offset 0x00008000 --dt device/motorola/sanders/dt.img
 LZMA_RAMDISK_TARGETS := recovery
-BOARD_CUSTOM_BOOTIMG_MK := device/motorola/sanders/mkbootimg.mk
-TARGET_PREBUILT_KERNEL := device/motorola/sanders/kernel
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8953
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
