@@ -1,3 +1,4 @@
+
 on fs
     chmod 0660 /dev/qseecom
     chown system drmrpc /dev/qseecom
@@ -17,8 +18,21 @@ service sbinqseecomd /sbin/qseecomd
     group root
     seclabel u:r:recovery:s0
 
+service gatekeeper-1-0 /sbin/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-3-0 /sbin/android.hardware.keymaster@3.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
 on property:ro.crypto.state=encrypted
     start sbinqseecomd
 
-on property:ro.crypto.fs_crypto_blkdev=/dev/block/dm-0
-    stop sbinqseecomd
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+    start gatekeeper-1-0 

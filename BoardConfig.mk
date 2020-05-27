@@ -41,6 +41,9 @@ TARGET_HW_DISK_ENCRYPTION := true
 TARGET_BOARD_PLATFORM := msm8953
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
 
+# Keymaster
+TARGET_PROVIDES_KEYMASTER := true
+
 # Kernel
 BOARD_CUSTOM_BUILD_MAKEFILE := $(LOCAL_PATH)/dt_image.mk
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
